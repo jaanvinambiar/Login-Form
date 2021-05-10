@@ -1,0 +1,152 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),url(./images/login.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.4));
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: rgb(226, 223, 223);
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .text-field{
+    position: relative;
+    border-bottom: 1px solid rgb(172, 175, 179);
+    margin: 30px 0;
+}
+.text-field input{
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    border: none;
+    font-size: 16px;
+    background: none;
+    outline: none;
+    color: rgb(172, 175, 179);
+}
+.text-field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: rgb(172, 175, 179);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.text-field span::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: linear-gradient(120deg, silver, rgb(105, 103, 103));
+    width: 0;
+    height: 2px;
+    transition: .5s ease;
+}
+.text-field input:focus ~ label,
+.text-field input:valid ~ label{
+    top: -5px;
+    color: rgb(172, 175, 179);
+}
+.text-field input:focus ~ span::before,
+.text-field input:valid ~ span::before{
+    width:100%;
+}
+.pass{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: rgb(172, 175, 179);
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(rgba(0,0,0.3), rgba(0,0,0.4));
+    border: 1px solid;
+    font-size: 18px;
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: rgb(48, 46, 46);
+    transition: 0.5s;
+}
+.signup{
+    width: 100%;
+    margin: 35px 130px;
+    color: aliceblue;
+}
+.signup a{
+    text-decoration: none;
+    color: rgb(165, 165, 204);
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width:700px){
+    .center{
+        width: 350px;
+    }
+    .center h1{
+        font-size: 30px;
+    }
+    .signup{
+        margin: 35px 60px;
+    }
+}
+@media only screen and (max-width:430px){
+    .center{
+        width: 320px;
+    }
+    .center h1{
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    .signup{
+        margin: 35px 10px;
+    }
+}
+@media only screen and (max-width:380px){
+    .center{
+        width: 290px;
+    }
+}
+@media only screen and (max-width:330px){
+    .center{
+        width: 250px;
+    }
+    .center h1{
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    .signup{
+        margin: 35px 10px;
+    }
+}
