@@ -2,9 +2,6 @@ body{
     margin: 0px;
     padding: 0px;
     background: linear-gradient(-46deg, #e086aa , #ba4574, #a12b5a ,#6d213f, black );
-   /* background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
     background-size: 400% 400%;
     position: relative;
     height: 100vh;
